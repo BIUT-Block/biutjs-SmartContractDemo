@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Contract Demo</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .section {
+      margin: 20px;
+    }
+    button {
+      padding: 5px 16px;
+      border-radius: 4px;
+    }
+    button#buyObject { background-color: yellow; }
+    button#buyShare { background-color: red; }
+
+  </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Trade Chain</h1>
+    <div class="section">
+      Contract deployed at: <span id="defaultTradeAddress"></span>
+    </div>
+    <div class="section">
+        Buyer Address: <span type="text" id="showBuyerAddress"></span>
+    </div>
+    <div class="section">
+    Buyer Balance: <span type="text" id="buyerBalance"></span> 
+    </div>    
+    <div class="section">
+      Seller Address: <span type="text" id="showSellerAddress"></span>
+    </div>
+    <div class="section">
+      Seller Balance: <span type="text" id="sellerBalance"></span> 
+    </div>    
+
+  <hr/>
+  <h1>Token Chain</h1>
+    <div class="section">
+      Contract deployed at: <span id="defaultShareAddress"></span>
+    </div>
+    <div class="section">
+        Buyer Address: <span type="text" id="showBuyerShareAddress"></span>
+    </div>
+    <div class="section">
+    Buyer Balance: <span type="text" id="buyerShareBalance"></span> 
+    </div>    
+    <div class="section">
+      Sharer Address: <span type="text" id="showSellerShareAddress"></span>
+    </div>
+    <div class="section">
+      Sharer Balance: <span type="text" id="sellerShareBalance"></span> 
+    </div>    
+
+
+  <hr/>
+  
+  <div class="section">
+    <h2>Buy</h2>
+    <div class="section">
+    Amount: <input type="text" id="buyAmount"/> 
+    </div>
+    <div class="section">
+    Buyer Address: <input type="text" id="buyerAddress" />
+    </div>
+    <button id="buyObject" type="submit" onclick="App.buyObject()">Buy</button>
+    <button id="buyShare" type="submit" onclick="App.buyShareObject()">Buy From Share</button>
+    <span id="buyObjectResult"></span>
+  </div>
+
+  <hr/>
+
+</body>
+</html> 
